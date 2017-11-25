@@ -7,7 +7,7 @@ export default class VideoGrid extends React.Component {
 
     render() {
         return <ul>
-            {this.props.videos.map(video => <li key={video}>video</li>)}
+            {this.props.videos.map(video => <li key={video.id}>{video.id}</li>)}
         </ul>
     }
 }
