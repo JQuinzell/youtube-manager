@@ -5,6 +5,7 @@ class YouTubeVideoStore {
     @observable data = observable.map()
 
     constructor() {
+        this.data = observable.map()
         this.fetchInitialData = this.fetchInitialData.bind(this)
     }
 
