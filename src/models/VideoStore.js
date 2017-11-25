@@ -12,12 +12,6 @@ class YouTubeVideoStore {
     @computed get videos() {
         return this.data.values()
     }
-
-    fetchInitialData() {
-        database().ref(`/videos`).once('value').then(snapshot => {
-            this.data.replace(snapshot.val())
-        })
-    }
 }
 
 export default new YouTubeVideoStore()
