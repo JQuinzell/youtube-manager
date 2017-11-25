@@ -15,11 +15,7 @@ class YouTubeVideoStore {
 
     fetchInitialData() {
         database().ref(`/videos`).once('value').then(snapshot => {
-            this.data = observable.map(snapshot.val())
-            console.log(this.videos.map(v => ({
-                id: v.id,
-                tags: v.tags
-            })))
+            this.data.replace(snapshot.val())
         })
     }
 }
