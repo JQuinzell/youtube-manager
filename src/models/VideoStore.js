@@ -14,7 +14,6 @@ class YouTubeVideoStore {
         })
 
         this.data = observable.map()
-        this.fetchInitialData = this.fetchInitialData.bind(this)
     }
 
     @computed get videos() {
