@@ -1,13 +1,13 @@
 import * as React from 'react'
-
+import VideoPlayer from './VideoPlayer'
 export default class VideoGrid extends React.Component {
     constructor(props) {
         super(props)
     }
 
     render() {
-        return <ul>
-            {this.props.videos.map(video => <li key={video.id}>{video.id}</li>)}
-        </ul>
+        return <div className="videogrid"> 
+            {this.props.videos.map(video => <VideoPlayer video={video} key={video.id} className="videoitem" />)}
+        </div>
     }
 }

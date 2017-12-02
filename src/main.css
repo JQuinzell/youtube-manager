@@ -1,3 +1,21 @@
 body {
     background: pink;
+    margin: 50px auto;
+}
+.videogrid
+{
+    width: 1300px;
+    margin: 50px 0;
+    justify-content: flex-start;
+    align-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.videoitem
+{
+    margin: 10px 10px;
+    flex-basis: 150px;
+    height: 150px;
+    background: grey;
 }
