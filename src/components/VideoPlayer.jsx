@@ -6,10 +6,11 @@ export default class VideoPlayer extends React.Component {
     }
 
     render() {
-        return <iframe 
-            width="560" 
-            height="315" 
-            src={`https://www.youtube.com/embed/${this.props.id}`}
+        return <iframe
+            className="videoitem" 
+            width="150" 
+            height="150" 
+            src={`https://www.youtube.com/embed/${this.props.video.id}`}
             frameborder="0" 
             allowfullscreen></iframe>
     }
