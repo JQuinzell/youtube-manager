@@ -16,4 +16,9 @@ export default class YouTubeVideo {
             tags: this.tags
         })
     }
+
+    addTag(tag) {
+        this.tags.push(tag)
+        this.save()
+    }
 }
