@@ -1,6 +1,8 @@
 import * as React from 'react'
 import AddTag from './AddTag'
+import { observer } from 'mobx-react'
 
+@observer
 export default class VideoPlayer extends React.Component {
     constructor(props) {
         super(props)
