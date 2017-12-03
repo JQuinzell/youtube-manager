@@ -1,5 +1,5 @@
 body {
-    background: pink;
+    background: rgb(39, 146, 247);
     margin: 50px auto;
 }
 .videogrid
@@ -29,7 +29,7 @@ body {
     width: 250px;
     list-style-type: none;
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
 
 .tagitem
@@ -37,6 +37,6 @@ body {
     margin-right: 9px;
     border-radius: 5px;
     height: 20px;
-    flex-basis: 250px;
+    flex-basis: 40px;
     background: purple;
 }
