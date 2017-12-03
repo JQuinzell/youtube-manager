@@ -5,9 +5,9 @@ export default class YouTubeVideo {
     id = null
     @observable tags = []
 
-    constructor(id, tags = []) {
+    constructor(id, tags=[]) {
         this.id = id
-        this.tags = tags
+        this.tags = observable(tags)
 
         this.save = this.save.bind(this)
     }
