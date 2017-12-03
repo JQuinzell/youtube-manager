@@ -9,7 +9,8 @@ class YouTubeVideoStore {
 
     constructor() {
         videosRef.on('child_added', data => {
-            let video = new YouTubeVideo(data.val().id)
+            console.log(data.val().tags)
+            let video = new YouTubeVideo(data.val().id, data.val().tags)
             this.data.set(video.id, video)
         })
 

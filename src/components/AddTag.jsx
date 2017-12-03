@@ -10,7 +10,7 @@ export default class CreateVideo extends React.Component {
     }
 
     handleSubmit(data) {
-        this.props.video.addTag(data)
+        this.props.video.addTag(data.tagdata)
     }
 
     render() {

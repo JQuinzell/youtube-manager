@@ -1,11 +1,13 @@
 import { database } from 'firebase'
+import { observable } from 'mobx'
 
 export default class YouTubeVideo {
     id = null
-    tags = []
+    @observable tags = []
 
-    constructor(id) {
+    constructor(id, tags = []) {
         this.id = id
+        this.tags = tags
 
         this.save = this.save.bind(this)
     }
@@ -19,6 +21,7 @@ export default class YouTubeVideo {
 
     addTag(tag) {
         this.tags.push(tag)
+        console.log("Adding tag", this.tags)
         this.save()
     }
 }

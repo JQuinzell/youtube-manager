@@ -1,4 +1,5 @@
 import * as React from 'react'
+import AddTag from './AddTag'
 
 export default class VideoPlayer extends React.Component {
     constructor(props) {
@@ -16,11 +17,11 @@ export default class VideoPlayer extends React.Component {
             allowfullscreen></iframe>
 
             <div className="taggrid">
-                <div className="tagitem"> Tag 1</div>
-                <div className="tagitem"> Tag 2</div>
-                <div className="tagitem"> Tag 3</div>
-                <div className="tagitem"> Tag 4</div>
-            </div>    
+                {this.props.video.tags.map((tag, i) => (
+                    <div key={i} className="tagitem">{tag}</div>
+                ))}
+            </div>
+            <AddTag video={this.props.video} />
     </div>    
     }
 }
