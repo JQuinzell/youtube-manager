@@ -20,6 +20,13 @@ class YouTubeVideoStore {
     @computed get videos() {
         return this.data.values()
     }
+    videosByTag(tag) {
+        let videos = this.videos.filter(video => {
+            let tagsincluded=video.tags.includes(tag)
+            return tagsincluded
+        })
+        return videos
+    }
 }
 
 export default new YouTubeVideoStore()

@@ -13,7 +13,7 @@ export default class Main extends React.Component {
     render() {
         return <div>
             <CreateVideo />
-            <VideoGrid videos={VideoStore.videos} />
+            <VideoGrid videos={VideoStore.videosByTag()} />
         </div>
     }
 }
