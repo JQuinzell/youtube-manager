@@ -15,7 +15,28 @@ body {
 .videoitem
 {
     margin: 10px 10px;
-    flex-basis: 150px;
+    flex-basis: 266px;
     height: 150px;
     background: grey;
+}
+
+.taggrid
+{
+    margin: 10px;
+    padding: 0;
+    margin-top: -5px;
+    align-content: flex-start;
+    width: 250px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tagitem
+{
+    margin-right: 9px;
+    border-radius: 5px;
+    height: 20px;
+    flex-basis: 250px;
+    background: purple;
 }
