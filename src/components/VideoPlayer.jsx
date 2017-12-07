@@ -9,14 +9,12 @@ export default class VideoPlayer extends React.Component {
     }
 
     render() {
+        const backgroundURL = `https://img.youtube.com/vi/${this.props.video.id}/default.jpg`
         return <div>
-            <iframe
-            className="videoitem" 
-            width="266" 
-            height="150" 
-            src={`https://www.youtube.com/embed/${this.props.video.id}`}
-            frameborder="0" 
-            allowfullscreen></iframe>
+            <div
+                className="videoitem" 
+                style={{ backgroundImage: `url(${backgroundURL})`}}
+            />
 
             <div className="taggrid">
                 {this.props.video.tags.map((tag, i) => (

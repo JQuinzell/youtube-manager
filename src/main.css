@@ -16,8 +16,8 @@ body {
 {
     margin: 10px 10px;
     flex-basis: 266px;
+    background-size: contain;
     height: 150px;
-    background: grey;
 }
 
 .taggrid
