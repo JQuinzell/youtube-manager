@@ -15,7 +15,7 @@ export default class Main extends React.Component {
         return <div>
             <CreateVideo />
             <FilterTags />
-            <VideoGrid videos={VideoStore.videosByTag()} />
+            <VideoGrid videos={VideoStore.videos} />
         </div>
     }
 }
