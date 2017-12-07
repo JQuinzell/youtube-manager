@@ -16,7 +16,7 @@ export default class YouTubeVideo {
     save() {
         database().ref(`videos/${this.id}`).set({
             id: this.id,
-            tags: this.tags
+            tags: this.tags.slice()
         })
     }
 
