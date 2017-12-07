@@ -6,7 +6,8 @@ const videosRef = database().ref(`/videos`)
 
 class YouTubeVideoStore {
     @observable data = observable.map()
-
+    @observable filter = ""
+    
     constructor() {
         videosRef.on('child_added', data => {
             console.log(data.val().tags)
@@ -15,13 +16,17 @@ class YouTubeVideoStore {
         })
 
         this.data = observable.map()
+
+        this.videosByTag = this.videosByTag.bind(this)
     }
 
     @computed get videos() {
-        return this.data.values()
+        if(this.filter) return this.videosByTag(this.filter)
+        else return this.data.values()
     }
+
     videosByTag(tag) {
-        let videos = this.videos.filter(video => {
+        let videos = this.data.values().filter(video => {
             let tagsincluded=video.tags.includes(tag)
             return tagsincluded
         })
