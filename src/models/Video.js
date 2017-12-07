@@ -10,6 +10,7 @@ export default class YouTubeVideo {
         this.tags = observable(tags)
 
         this.save = this.save.bind(this)
+        this.addTag = this.addTag.bind(this)
     }
 
     save() {
@@ -21,7 +22,6 @@ export default class YouTubeVideo {
 
     addTag(tag) {
         this.tags.push(tag)
-        console.log("Adding tag", this.tags)
         this.save()
     }
 }
